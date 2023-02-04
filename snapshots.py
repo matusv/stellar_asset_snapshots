@@ -106,17 +106,17 @@ def get_initial_ops_to_check(asset_code, asset_issuer, server):
 
 def main() -> int:
     if len(sys.argv) == 4:
-        _, asset, issuer, timestamp = sys.argv
+        _, asset_code, issuer, timestamp = sys.argv
     
     elif len(sys.argv) == 3:
-        _, asset, issuer = sys.argv
+        _, asset_code, issuer = sys.argv
         timestamp = None
 
     server = Server(horizon_url="https://horizon-testnet.stellar.org")
 
     snapshots = create_balance_snapshots(
-        asset_code="A6", 
-        asset_issuer="GCFRQ3CQG5XY4CH5E4ZSTACZ27YYFEWZG636J4GIBWY3FKE3KSJ5ZBCK", 
+        asset_code=asset_code, 
+        asset_issuer=issuer, 
         timestamp=None,
         server=server
     )
