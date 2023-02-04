@@ -117,7 +117,7 @@ def main() -> int:
     snapshots = create_balance_snapshots(
         asset_code=asset_code, 
         asset_issuer=issuer, 
-        timestamp=None,
+        timestamp=timestamp,
         server=server
     )
 
