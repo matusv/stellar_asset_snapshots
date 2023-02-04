@@ -13,7 +13,8 @@ Output:
           ...
       },
       "transactions": [
-          (*from pub key*, *to pub key*, *amount*)
+          (*from pub key*, *to pub key*, *amount*),
+          ...
       ]
     }
     ...
